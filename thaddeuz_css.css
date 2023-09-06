@@ -1,275 +1,116 @@
 /* thaddeuz css by youtube.com/@thaddeuz_ */
 /* Please credit me if you want to redistribute this code as part of your code. */
 
-/* Updated 20 June 2023 */
+/* Updated 6 September 2023 */
 
   :root {
       --accent-color: #ffffff;
+    --div-grey: rgb(0 0 0 / 0%);
+    --div-black: rgb(59 58 58 / 0%);
   }
   
   /* fonts */
-  
+
 @font-face {
     font-family: gamefont;
     src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2);
 }
-  
-  /* timer */
-  
-  #timerDisplay {
-      background-color: transparent;
-  }
-  
-  #timerVal {
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-  }
-  
-  /* fps */
-   
-  #fpsDisplay {
-      visibility: hidden;
-  }
-   
-  #ingameFPS {
-      color: #fff !important;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-      visibility: visible;
-  }
-  
-  /* ping */
-  
-  #pingText {
-      color: #fff !important;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-  }
-   
-  #pingIcon {
-      color: var(--accent-color) !important;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-  }
-   
-  #pingDisplay .material-icons {
-      font-size: 20px;
-  }
-  
-   /* health bar */
 
-  #healthBar {
-      width: 280px;
-      height: 26px;
-      display: flex;
-      position: fixed;
-      left: calc(50% - 140px);
-      bottom: 40px;
-      box-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+/* menu css */
+
+   /* bottom */
+
+  .button {
+      background-color: transparent !important;
   }
   
-  .healthBarSeg {
-      display: flex;
-      width: -webkit-fill-available;
-      margin: 0 -3.88px;
-      background:transparent
-  }
-  
-  .hpBSeg {
-      border-radius: 1;
-      box-shadow: none;
-  }
-  
-  /* ammo */
-  
-  #ammoDisplay {
-      transform: unset;
-      background-color: transparent;
-      position: fixed;
-      left: calc(50% - 20000px);
-      bottom: calc(50% - 20000px);
+  #subLogoButtons {
+      bottom: 90px;
   }
 
-  #ammoVal {
-      color: white;
-      font-size: 60px;
-      position: fixed;
-      left: calc(50% + 170px);
-      bottom: 20px;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+  .button, .button:hover { 
+      border: hidden ! important;
   }
 
- /* scores */
+   /* top left top right */
 
-#teamScores {
-    padding: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    background: none
-}
-
-  .tScoreC.you {
-      background-color: #b2f252
+  #mLevelCont,
+     .headerBarLeft,
+     .headerBarRight {
+     background-color: transparent;
   }
   
-  .tScoreT {
-      color: white;
-      font-size: 18px
-  }
-  
-  .tScoreM {
-      color: white;
-      font-size: 14px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      max-width: 175px;
-      display: inline-block;
-      line-height: 28px;
-      vertical-align: sub
+  #menuAccountUsername {
+      margin-left: 10px;
+      margin-top: 9px;
   }
 
-.tScoreC {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin-right: 10px;
-    background-color: #eb5656
-
-}
-
- /* chat */
-
-  .chatItem {
-      font-size: 20px;
-      padding-right: 5px;
-      max-width: 265px;
-  }
-  
-  .chatItem span[style="color:#fc03ec"] {
-      color: hotpink !important;
+  .progressBar {
+      background-color: rgba(0, 0, 0, 0.15);
   }
 
-  #chatHolder #chatList  {
-      background-color: rgba(0, 0, 0, .075);
-  }
-  
-  #chatInputHolder {
-      border: 0px solid rgba(0,0,0,0);
-      background-color: transparent   
-  }
-  
-  #chatSwitchHolder {
-      display: none
-  }
-  
-  #chatInput {
-      margin-left: 0px;
-      width: 100%;
-      font-size: 20px;
-      border: 0px solid rgba(0,0,0,0);
-      background-color: transparent
-  }
-  
-  #uiBase.onGame #chatHolder {
-      left: 20px;
-      bottom: 16px
-  }
-  
-  
-  /* modified reizu uwu quake counters */
-  .countIcon {
-      background-color: transparent;
-      border-radius: 0;
-      margin-left: 20px;
-      margin-bottom: 0;
-      padding: 7px;
-  }
-  
-  #deathsVal,
-  #killsVal,
-  #livesDisp,
-  #streakVal,
-  #myScoreVal {
-      color: white !important;
-      bottom: 7px;
-      font-size: 32px;
-      display: flex;
-      justify-content: center;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-  }
-  
-  #deathsVal::after,
-  #killsVal::after,
-  #streakVal::after,
-  #myScoreVal::after,
-  #livesDisp::after {
-      margin-left: 5px;
-      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
-  }
-  
-  #deathsVal::after {
-      content: 'D';
-  }
-  
-  #killsVal::after {
-      content: 'K';
-  }
-  
-  #streakVal::after {
-      content: 'S';
-  }
-  
-  #myScoreVal::after {
-      content: 'S';
-  }
-  
-  #livesDisp::after {
-      content: 'L';
-  }
-  
-  #killsIcon,
-  #deathsIcon,
-  #streakIcon,
-  #scoreCount .material-icons,
-  #livesCount .material-icons {
-      display: none;
+  .progressBarInner {
+      background-image: linear-gradient(to right,white, lightgrey);
+      transition: width 1s ease-in-out;
+      border-radius: 0px
   }
 
- /* yuki css inspired leaderboard */
+   /* left */
 
-#leaderDisplay {
-    background-color: white;
-    border-radius: 0;
-    box-shadow: 8px 8px black;
-    margin-right: 12px;
-}
+  .material-icons-outlined,
+  span.material-symbols-outlined.menBtnIcn {
+      color: #fff !important
+  }
 
-.leaderItem {
-    font-size: 24px;
-}
+  #menuItemContainer {
+      background: transparent
+  }
 
-.leaderCounter, .leaderNameM, .leaderScore {
-    color: black;
-}
+  .menuItem .menuItemTitle {
+      font-size: 18px !important;
+  }
 
-.leaderNameF {
-    color: black;
-    opacity: 0.5;
-}
+   /* hud class popup */
 
-.leaderNameM span {
-  color: black!important;
-}
+  #menuClassContainer {
+      top: unset;
+  }
+
+  #menuClassContainer:hover #classPreviewCanvas {
+      transform: unset !important;
+  }
+
+  #classPreviewCanvas {
+      transform: translateY(5000000px);
+      margin-bottom: -135px;
+      margin-right: -113px;
+  }
+
+  .bigShadowT {
+      text-shadow: none !important
+  }
+
+   /* remove click to play animation */
+
+  #instructions {
+      animation: none
+  }
 
    /* removal */
-
+  #bottomLeftClassImg, 
+  #bottomLeftHealth,
+  #bottomLeftTeamHolder,
+  #voiceIcon,
+  #recTimer, 
+  #bottomLeftChallIcon,
+  .weapKey,
+  .weapStreakHolder, 
   #ammoMax,
-  #ammoIcon,
   #reloadMsg,
-  #hudClassImg,
-  #hudClassIcon,
-  #healthValue,
-  #challIcon,
-  #healthValueHolder,
-  .weapItem,
+  #ammoIcon,
+  #weapHolder, 
+  #matchInfo,
+  #miniMapOverlay, 
   .youNewDiv,
   #updateAdIcon,
   #helpTxtHol,
@@ -279,6 +120,7 @@
   #aHolder,
   .endAHolder,
   #streamContainer,
+  #topRightAdHolder, 
   #merchImg,
   #ot-sdk-btn-floating.ot-floating-button,
   #seasonLabel,
@@ -289,7 +131,6 @@
   #curGameInfo,
   #mainLogoFace,
   #termsInfo, 
-  #clientExit,
   #aMerger,
   #rankedSoonTm,
   #newsHolder,
@@ -327,108 +168,111 @@
       display: none !important;
   }
 
-/* menu css */
+   /* health bar */
 
-   /* bottom */
+#bottomLeftHealthBar {
+      width: 200px;
+      position: fixed;
+      left: calc(50% - 110px);
+      bottom: 25px;
+}
 
-  .button {
-      background-color: transparent !important;
-  }
+.nHealthBarSeg {
+      display: flex;
+      height: 21px;
+      width: -webkit-fill-available;
+      margin: 0 -3.88px;
+      background:transparent
+}
   
-  #subLogoButtons {
-      bottom: 90px;
-  }
+.nHpBSeg {
+      border-radius: 1;
+}
 
-  .button, .button:hover { 
-      border: hidden ! important;
-  }
+   /* ammo - THANKS JITCHU */
 
-   /* top left top right */
+#ammoHolder {
+    transform: unset;
+   
+}
 
-  .headerBarLeft,
-  .headerBarRight {
-      background-color: transparent;
-  }
+#ammoVal {
+    font-size: 40px;
+    display: inline-block;
+    position: fixed;
+    left: calc(50% + 110px);
+    bottom: 22px;
+}
+
+   /* timer */
+
+#timerHolder {
+      position: fixed;
+      top: 1%;
+      left: 1%;
+}
+
+#timerVal {
+      font-size: 30px;
+      padding-left: 0;
+      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+   /* counters */
+
+#killsVal,#deathsVal,#streakVal,#myScoreVal,#kdVal {
+      color: white;
+      font-size: 30px;
+      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#killsIcon,#deathsIcon,#streakIcon,#kdIcon {
+    width: 30px;
+    height: 30px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: antialiased;
+}
+
+   /* fps and ping */
+
+#fpsDisplay, #fpsDisplay>span {
+      padding-left: 3px;
+      padding-top: 50px
+}
+
+
+#ingameFPS,#menuFPSDisplay,
+#menuPingText,#menuPingDisplay .material-icons,
+#pingDisplay,#fpsDisplay,#ingressDisplay,#egressDisplay,#tickDisplay,
+#pingText,#ingressPacketCount,#ingressDataSize,#egressPacketCount,#egressDataSize,#tickPacketCount {
+      color: rgb(255, 255, 255) !important;
+      text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+   /* chat */
+
+#chatInput {
+    font-size: 18px;
+    background-color: rgba(0,0,0,0);
+    border: 0px solid rgba(0,0,0,0);
+    border-radius: 0px
+}
+
+#chatSwitch {
+    margin-bottom: -3px;
+}
+
+#chatList {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.chatItem {
+      font-size: 18px;
+      padding-right: 5px;
+      max-width: 265px;
+}
   
-  #menuAccountUsername {
-      margin-left: 10px;
-      margin-top: 9px;
-  }
-
-  .progressBar {
-      background-color: rgba(0, 0, 0, 0.15);
-  }
-
-  .progressBarInner {
-      background-image: linear-gradient(to right,white, lightgrey);
-      transition: width 1s ease-in-out;
-      border-radius: 0px
-  }
-  
-  #mLevelCont {
-      background-color: transparent;
-  }
-
-  #menuFPS {
-      color: var(--accent-color) !important;
-  }
-  
-  #menuPingIcon {
-      color: var(--accent-color) !important;
-  }
-
-  #menuPingDisplay .material-icons {
-      font-size: 16px;
-  }
-
- /* remove esports cred Krunkitis #7104 */
-
-  .menuItem[onclick*="esports"] {
-      display: none !important;
-  }
-
-  .menuItem .menuItemTitle {
-      margin-top: 0;
-      color: var(--accent-color) !important;
-      font-size: 18px !important;
-      text-transform: var(--text-transform);
-      transition: all .2s;
-  }
-
- /* remove colour cred switch css */
-
-  .material-icons-outlined,
-  span.material-symbols-outlined.menBtnIcn {
-      color: #fff !important
-  }
-
-  #menuItemContainer {
-      background: transparent
-  }
-
- /* hud class popup cred Krunkitis #7104 */
-
-#menuClassContainer {
-    top: unset;
+.chatItem span[style="color:#fc03ec"] {
+      color: hotpink !important;
 }
-
-#menuClassContainer:hover #classPreviewCanvas {
-    transform: unset !important;
-}
-
-#classPreviewCanvas {
-    transform: translateY(5000000px);
-    margin-bottom: -135px;
-    margin-right: -113px;
-}
-
-.bigShadowT {
-    text-shadow: none!important
-}
-
- /* remove click to play */
-
-#instructions {
-    animation: none
-}
-
